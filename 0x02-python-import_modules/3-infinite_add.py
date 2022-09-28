@@ -5,3 +5,4 @@ if __name__ == "__main__":
     for s in argv[1:]:
         add += int(s)
     print("{:d}".format(add))
+    
