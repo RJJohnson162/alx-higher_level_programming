@@ -1,15 +1,7 @@
-#!/usr/bin/env node
-
-'use strict';
-
+#!/usr/bin/node
 exports.esrever = function (list) {
-  const reversed = [];
-  for (let i = list.length - 1; i >= 0; i--) {
-    reversed.push(list[i]);
-  }
-  return reversed;
+  return list.reduceRight(function (array, current) {
+    array.push(current);
+    return array;
+  }, []);
 };
-
-const list = [1, 2, 3, 4, 5];
-
-console.log(esrever(list)); // Output: [5, 4, 3, 2, 1]
